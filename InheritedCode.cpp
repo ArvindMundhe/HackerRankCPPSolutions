@@ -3,7 +3,20 @@
 #include <sstream>
 #include <exception>
 using namespace std;
-
+class BadLengthException
+{
+    private:
+    int n;
+    public:
+        BadLengthException(int errornumber) {
+            n = errornumber;
+        }
+    
+        int what() {
+            return n;
+        }
+};    
+}
 
 bool checkUsername(string username) {
 	bool isValid = true;
