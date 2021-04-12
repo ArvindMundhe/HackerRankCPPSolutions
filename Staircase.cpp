@@ -5,10 +5,18 @@ using namespace std;
 // Complete the staircase function below.
 void staircase(int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n + 1; i++)
     {
-        cout<<" "*(n-1);
-        cout<<"#"*(i+1)<<endl;
+
+        for (int j = i; j < n; j++)
+        {
+            cout <<" ";
+        }
+        for (int k = 0; k < i; k++)
+        {
+            cout << "#";
+        }
+        cout<<endl;
     }
 }
 
