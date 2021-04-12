@@ -15,11 +15,11 @@ vector<string> split(const string &);
 
 int diagonalDifference(vector<vector<int>> arr) {
     int sum1=0, sum2=0,diff;
-    for(int i =0 ; i < n_temp ; i++)
+    for(int i =0 ; i < n ; i++)
     {
         sum1+=arr[i][i];
     }
-    for (int i=0 ; i < n_temp ; i++)
+    for (int i=0 ; i < n ; i++)
     {
         sum2+=arr[i][2-i];
     }
