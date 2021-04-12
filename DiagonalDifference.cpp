@@ -14,22 +14,18 @@ vector<string> split(const string &);
  */
 
 int diagonalDifference(vector<vector<int>> arr) {
-    int sum1=0, sum2=0,diff;
-    for(int i =0 ; i < n ; i++)
-    {
-        sum1+=arr[i][i];
+    int i, j, size, diag1, diag2;
+    i = j = diag1 = diag2 = 0;
+    size = arr.size();
+    j = size - 1;
+    while (i < size) {
+        diag1 += arr[i][i];
+        diag2 += arr[i][j];
+        ++i;
+        --j;
     }
-    for (int i=0 ; i < n ; i++)
-    {
-        sum2+=arr[i][2-i];
-    }
-    if ( sum1>sum2)
-    {
-        diff= sum1-sum2;
-    }
-    else 
-    diff=sum2-sum1;
-    return diff;
+    // Absolute difference between the matrix's two diagonal sums.
+    return abs(diag1 - diag2);
 }
 
 int main()
