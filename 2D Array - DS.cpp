@@ -4,30 +4,23 @@ using namespace std;
 
 // Complete the hourglassSum function below.
 int hourglassSum(vector<vector<int>> arr) {
-    int hourglassSums[16],cntr;
+    int max= -463464;
     for (int i = 0 ; i<4 ; i++)
     {
-        int sum=0;
-        for (int j=i ; j<i+4 ; j++)
+        int sum;
+        for (int j=0 ; j<4 ; j++)
         {
             sum = arr[i][j] +arr[i][j+1] + arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
-            hourglassSums[cntr]=sum;
-            cntr++; 
+            if(sum>max)
+            {
+                max=sum;
+            }
         }
         
 
     }
-    int max = -1;
-    for (int k =0 ; k<16 ; k++)
-    {
-        
-        if (hourglassSums[k]>max)
-        {
-            max = hourglassSums[k];
-        }
-    }
     return max;
-}
+};
 
 int main()
 {
