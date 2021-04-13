@@ -6,6 +6,10 @@ using namespace std;
 Enter code for class Student here.
 Read statement for specification.
 */
+class Student {
+    int age,strd;
+    string fname,lname;
+}
 
 int main() {
     int age, standard;
