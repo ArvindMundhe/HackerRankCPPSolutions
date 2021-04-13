@@ -16,13 +16,13 @@ vector<string> split(const string &);
 int birthdayCakeCandles(vector<int> candles)
 {
     int max = candles[0];
-    for (int i = 0; i < candles_count; i++)
+    for (int i = 0; i < candles.size(); i++)
     {
         if (candles[i]>max)
         max= candles[i];
     }
-    cntr=0;
-    for (int i=0 ; i < candles_count ; i++)
+    int cntr=0;
+    for (int i=0 ; i < candles.size() ; i++)
     {
         if (candles[i]==max)
         cntr++;
