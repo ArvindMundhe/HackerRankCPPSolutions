@@ -5,21 +5,19 @@ using namespace std;
 vector<string> split_string(string);
 
 // Complete the miniMaxSum function below.
-void miniMaxSum(vector<int> arr)
+void miniMaxSum(vector<long long  int> arr)
 {
-    int sortedArr[5], minInt=2147483647,maxInt= -2147483647,sum=0;
-    for ( int i=0 ; i <5 ; i++)
-    {
-        if (arr[i]>maxInt) maxInt=arr[i];
-    }
-    for ( int i=0 ; i <5 ; i++)
-    {
-        if (arr[i]<minInt) minInt=arr[i];
-    }
+    long long int minInt=arr[0],maxInt= arr[0],sum=0;
     for ( int i=0 ; i <5 ; i++)
     {
         sum+=arr[i];
-    }  
+        
+        if (arr[i]>maxInt) 
+        maxInt=arr[i];
+        
+        if (arr[i]<minInt) 
+        minInt=arr[i];
+    } 
     cout<<sum-maxInt<<" "<<sum-minInt;  
 
 }
@@ -31,7 +29,7 @@ int main()
 
     vector<string> arr_temp = split_string(arr_temp_temp);
 
-    vector<int> arr(5);
+    vector<long long int> arr(5);
 
     for (int i = 0; i < 5; i++)
     {
