@@ -18,9 +18,10 @@ string timeConversion(string s)
     {
         if( (stoi(hh)) >12)
         {
-          hh= ((stoi(hh))  );  
+          hh= ((stoi(hh))  -12 );  
         }
-        
+        else
+        hh= stoi(hh);
         return hh + ":" +  s.substr(3,5);
     }   
 }
