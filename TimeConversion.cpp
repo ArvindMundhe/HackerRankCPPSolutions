@@ -7,23 +7,24 @@ using namespace std;
  */
 string timeConversion(string s)
 {
-    string hh=s.substr(0,2),mm,ss;
-    if ( s[8]=='P')
+    string hh = s.substr(0, 2), mm, ss;
+    if (s[8] == 'P')
     {
-        hh = to_string(12+stoi(hh) ) ;
-        
-        return hh + ":" +  s.substr(3,5) ; 
-    }
-    else 
-    {
-        if( (stoi(hh)) >12)
+        if (stoi(hh) != 12)
         {
-          hh= ((stoi(hh))  -12 );  
+            hh = to_string(12 + stoi(hh));
         }
-        else
-        hh= stoi(hh);
-        return hh + ":" +  s.substr(3,5);
-    }   
+
+        return hh + ":" + s.substr(3, 5);
+    }
+    else
+    {
+        if(stoi(hh) == 12)
+        {
+            hh="00";
+        }
+        return hh + ":" + s.substr(3, 5);
+    }
 }
 
 int main()
