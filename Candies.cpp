@@ -1,5 +1,10 @@
 #include <bits/stdc++.h>
 
+//while noofcandies[current] < noofcandies[current -1]{
+	//		noofcandies[current]++
+	//		current--
+	//	}
+    
 using namespace std;
 // Complete the candies function below.
 long candies(int n, vector<int> arr)
